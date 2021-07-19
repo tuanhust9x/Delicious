@@ -10,11 +10,18 @@ import SwiftUI
 struct MainView: View {
   var body: some View {
     VStack {
+      Spacer().frame(height: Dimensions.topArea)
+      LocationView {
+        searchLocation()
+      }
       Spacer()
       TabbarView()
     }
     .background(Color.init(#colorLiteral(red: 0.8196078431, green: 0.8270888329, blue: 0.8519172668, alpha: 1)))
-    .edgesIgnoringSafeArea(.bottom)
+  }
+  
+  private func searchLocation() {
+    print("start search")
   }
 }
 
